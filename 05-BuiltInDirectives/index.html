@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>builtInDirectives</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <style media="screen">
+    .highlight {
+      background-color: yellow;
+    }
+    .invalid {
+      color: red;
+    }
+    .valid {
+      color: green;
+    }
+
+  </style>
+  <body>
+    <div class="container">
+
+
+<!-- Iterate through names -->
+    <!-- <div class="">
+      <ul ng-init="names=['Harry', 'Ron', 'Hermione', 'Sirius', 'Hedwig', 'Tonks']">
+        <li ng-repeat="name in names">
+          {{ name }}
+        </li>
+      </ul>
+    </div> -->
+    <!-- <div ng-controller="NamesController">
+      <p ng-repeat="name in vm.names">
+        {{ name }}
+      </p>
+    </div> -->
+<!-- Iterate through repeat numbers -->
+    <!-- <div >
+      <ul>
+        <li ng-repeat="n in [1,1,2,5,6,9,9,9] track by $index">
+          {{ n }}
+        </li>
+      </ul>
+    </div> -->
+<!--SHOW/HIDE  -->
+
+  <!-- <div ng-show='3 + 4 == 5'>
+    3 + 4 isn't 5, don't show
+  </div>
+
+  <div ng-show='3 + 4 == 7'>
+    3 + 4 is 7, do show
+  </div>
+
+  <div ng-hide='3 + 4 == 5'>
+    3 + 4 isn't 5, don't hide
+  </div>
+
+  <div ng-hide='3 + 4 == 7'>
+    3 + 4 is 7, do hide
+  </div> -->
+
+<!-- Sign Up Page with Color validation-->
+  <div>
+    <input type="text" class="invalid" ng-class="{valid: password.length > 6}" name="password" ng-model="password" placeholder="Password">
+    </input>
+    <h4 class="invalid" ng-class="{valid: password.length >6}">Your password is {{ password.length || 0 }} characters</h4>
+    <div>
+      <div ng-show='password.length > 6'>
+        <a class= "btn btn-info" name="signup">Signup
+        </a>
+      </div>
+      <div ng-show='password.length < 6 && password.length != null'>
+        <h4>Password is invalid!</h4>
+      </div>
+      <div ng-show='password.length == null'>
+        <h4>Please enter your password</h4>
+      </div>
+    </div>
+  </div>
+<!-- Highlight -->
+  <!-- <div>
+    <div ng-class='{highlight: 4 + 4 == 8}'> 4 + 4 = 8</div>
+    <div ng-class='{highlight: 4 + 4 == 10}'>4 + 4 = 10</div>
+  </div> -->
+
+  </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script type="text/javascript" src="app.js">
+
+    </script>
+  </body>
+</html>

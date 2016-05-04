@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+  </head>
+  <body>
+
+
+
+<!-- Dropdown Menu  -->
+    <!-- <select name="animal" ng-model="animals">
+      <option value="dogs">dogs</option>
+      <option value="cats">cats</option>
+      <option value="dogs and cats">dogs and cats</option>
+      <option value="neither">neither dogs nor cats</option>
+    </select>
+    <h3>I love {{ animal }}</h3> -->
+
+<!-- Currency -->
+    <!-- <h3>{{ 3.14159265359 | currency : "€" }}</h3> -->
+
+<!-- Uppercase / Lowercase -->
+
+    <!-- <input type="text" name="text" ng-model="text">
+    <h4>Yelling: {{ text | uppercase}}</h4>
+    <h4>Whispering: {{ text | lowercase}}</h4> -->
+<!-- Rounding numbers with dropdown menu-->
+    <!-- <h3>{{ 3.14159265359 | number:3}}</h3>
+    <h3>{{ 3.14159265359 | number:4}}</h3>
+    <h3>{{ 3.14159265359 | number:5}}</h3> -->
+    <!-- <h3>How many digits of Pi do you want to round?</h3>
+    <select type="number" ng-model="digits" name="digits">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <h3>Here you go! The first {{ digits }} of pi</h3>
+    <h3>{{ 3.14159265359 | number: digits }}</h3> -->
+
+<!-- Tip calculator -->
+    <!-- <h3>How much does your meal cost?<input type="number" name="amount" ng-model="amount"</input></h3>
+    <h3>How much do you want to tip?</h3>
+    <select type="number" name="tip" ng-model="tip">
+      <option value=".10" selected>10%</option>
+      <option value=".15">15%</option>
+      <option value=".20">20%</option>
+    </select>
+
+    <h2>Subtotal {{ amount | currency }}</h2>
+    <h2>Tip {{ (tip * amount) | currency}}</h2> -->
+
+<!-- div {{this}} -->
+    <div>
+      {{ this }}
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <!-- <input type="text" name="name" value="" class="name">
+    <h1></h1>
+
+    <script type="text/javascript" src="app.js">
+
+    </script> -->
+  </body>
+</html>
