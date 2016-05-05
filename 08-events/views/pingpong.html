@@ -3,19 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.css" media="screen" title="no title" charset="utf-8">
+    <style>
+    .divbox {
+      width: 400px;
+      height: 400px;
+      border-style: solid;
+      border-width: 6px;
+    }
+    .win {
+      background-color: green;
+    }
+    </style>
   </head>
   <body>
-    <div ng-controller="WordController">
-      <h1>Word Reverser</h1>
-      <input type="text" name="wc.word" ng-model="wc.word" placeholder="Type any word"></input>
+    <div ng-controller="PingPongController">
+      <div class="row">
+        <div class="col-md-6 divbox" ng-class="{win: divbox.win}" ng-mousedown="vm.players[0].points = vm.players[0].points +1">
+          <h5>Player {{vm.players[0].number}}</h5>
+          <h1>{{vm.players[0].points}}</h1>
+          <h4 ng-show="vm.players[0].serving == true">Serving</h4>
+        </div>
+        <a class="btn btn-default" name="add point" ng-click="AddWin(vm.players[0])">Add Point</a>
 
-      <h3>Your word: {{wc.word}}</h3>
+        <div class="col-md-6 divbox" ng-class="{win: divbox.win}" ng-mousedown="Serving()">
+          <h5>Player {{vm.players[1].number}}</h5>
+          <h1>{{vm.players[1].points}}</h1>
+          <h4 ng-show="vm.players[1].serving == true">Serving</h4>
+        </div>
 
-      <button ng-click="reverseWord()">Reverse Word</button>
+
+      </div>
+      <a class="btn btn-default btn-sm" name="reset" ng-click="Reset()">Reset
+      </a>
+      <h2>
+        {{vm.players[0].wins}}Player 1 wins
+        {{vm.players[1].wins}}Player 2 wins
+      </h2>
+
     </div>
 
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-    <script type="text/javascript" src="../js/word.js"></script>
+    <script type="text/javascript" src="../js/pingpong.js"></script>
   </body>
 </html>
